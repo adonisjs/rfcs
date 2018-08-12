@@ -51,3 +51,6 @@ Before starting your own RFC, it is important to look for the existing one's and
 You can filter the features by their category using the `scope:` label.
 
 For example: The RFC for changes in the HTTP layer will have the label of `scope:HTTP`, for Database `scope:Database` and so on.
+
+## Coding style
+Make sure to read the [contributing guidelines](https://adonisjs.com/contributing), before getting started.
