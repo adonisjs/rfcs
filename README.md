@@ -37,3 +37,17 @@ Let's get started together and create your first RFC.
 4. Double check the issue and submit it.
 5. Normally someone from the core team will give appropriate labels to the issue and get in touch with you in a couple of days.
 6. If you think your RFC is waiting for the response for a more than 7days, please feel free to reach `@virk` on Discord server, or email `virk[at]adonisjs[dot]com.`
+
+## Lifecycle
+
+Following is the lifecycle in which features are picked, developed and shipped to production.
+
+<img src="https://res.cloudinary.com/adonisjs/image/upload/v1534082256/Adonis-rfc-lifecycle_v0klvx.svg" width="350px" />
+
+## Filtering issues
+
+Before starting your own RFC, it is important to look for the existing one's and contribute to them.
+
+You can filter the features by their category using the `scope:` label.
+
+For example: The RFC for changes in the HTTP layer will have the label of `scope:HTTP`, for Database `scope:Database` and so on.
