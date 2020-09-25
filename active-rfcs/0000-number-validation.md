@@ -22,8 +22,8 @@ The unique rule we have is `unsigned` while we may need to validate a few other 
 | `positive` | Verify that the number is positive |
 | `negative` | Verify that the number is negative |
 
-The `negative` rule will do exactly the same as the current `unsigned` rule.
-Since the name is easier, I propose to deprecate the use of `unsigned` in favour of `negative`.
+The `positive` rule will do exactly the same as the current `unsigned` rule.
+Since the name is easier, I propose to deprecate the use of `unsigned` in favour of `positive`.
 
 Concerning the `decimal` rule, it's quite difficult in the JavaScript land to verify the number of decimal that a number has.
 One way (and the best way in my opinion) is to use a regular expression.
