@@ -21,7 +21,9 @@ The RFC process is not only about sharing your wishlist of features. You should 
 
 #### ❌ Bad example of an RFC
 
-In the following example, you are transferring the weight of research and finalizing the implementation level details. ** These kinds of RFCs will be closed without any explanation**.
+In the following example, you are transferring the weight of research and finalizing the implementation level details on the core team. 
+
+**These kinds of RFCs will be closed without any explanation**.
 
 ```
 Please add support for filesystem-based routing. It will be helpful for me and others as well.
@@ -31,7 +33,6 @@ These are some frameworks that do it.
 
 #### ✅ A better example of an RFC
 
-```
 - Share the feature you want the framework to have
 - Share the basic usage examples
 - Share if there are going to be any performance issues by introducing the feature
@@ -39,12 +40,11 @@ These are some frameworks that do it.
 - Share design and implementation details
 - Share unknows - We will be more than happy to discuss them in-depth with you
 - Share know limitations
-```
 
 ## What the process is
 In short, to get a major feature added to AdonisJS, one must first get the
 RFC merged into the RFC repo as a markdown file. At that point, the RFC
-is 'active' and may be implemented to achieve eventual inclusion
+is `'active'` and may be implemented to achieve eventual inclusion
 into AdonisJS.
 
 * Fork the RFC repo https://github.com/adonisjs/rfcs
@@ -57,24 +57,26 @@ present convincing motivation, demonstrate understanding of the
 impact of the design, or are disingenuous about the drawbacks or
 alternatives tend to be poorly received**.
 
-* Submit a pull request. Make sure to follow the pull request template and open a corresponding discussion thread.
+* Submit a pull request. Make sure to follow the pull request template and open a corresponding [discussion thread](https://github.com/thetutlage/rfcs/discussions).
 
 * Build consensus and integrate feedback in the discussion thread. RFCs with broad support are much more likely to make progress than those who don't receive any comments.
 
-* Eventually, the [core team] will decide whether the RFC is a candidate
+* Eventually, the [core team](https://github.com/orgs/adonisjs/people) will decide whether the RFC is a candidate
 for inclusion in AdonisJS.
 
-* An RFC can be modified based upon feedback from the [core team] and community. Significant modifications may trigger a new final comment period.
+* An RFC can be modified based upon feedback from the [core team](https://github.com/orgs/adonisjs/people) and community. Significant modifications may trigger a new final comment period.
 
 * An RFC may be rejected after the public discussion has settled
-and comments have been made summarizing the rationale for rejection. A member of the [core team] should then close the RFC's associated pull request.
+and comments have been made summarizing the rationale for rejection. A member of the [core team](https://github.com/orgs/adonisjs/people) should then close the RFC's associated pull request.
 
-* An RFC may be accepted at the close of its final comment period. A [core team] member will merge the RFC's associated pull request, at which point the RFC will become 'active'.
+* An RFC may be accepted at the close of its final comment period. A [core team](https://github.com/orgs/adonisjs/people) member will merge the RFC's associated pull request, at which point the RFC will become 'active'.
+
+* RFCs created by the core team may not wait for the consensus, since the work implemented in the RFC is directly maintained by the core team. However, if there is a strong push back, then the core team must build a consensus or drop the idea.
 
 ## Details on Active RFCs
 
 Once an RFC becomes active, then authors may implement it and submit the
-feature as a pull request to the applicable AdonisJS repo. Becoming 'active' is not a rubber stamp, and in particular, it still does not mean we will ultimately merge the feature; it does mean that the core team has agreed to it in principle and are amenable to merging it.
+feature as a pull request to the applicable AdonisJS repo. Becoming `'active'` is not a rubber stamp, and in particular, it still does not mean we will ultimately merge the feature; it does mean that the core team has agreed to it in principle and are amenable to merging it.
 
 Furthermore, the fact that a given RFC has been accepted and 'active' implies nothing about what priority is assigned to its implementation or whether anybody is currently working on it.
 
@@ -98,6 +100,6 @@ feel free to ask (e.g., by leaving a comment on the associated issue).
 
 ## Reviewing RFC's
 
-Members of the [core team] will attempt to review some set of open RFC
+Members of the [core team](https://github.com/orgs/adonisjs/people) will attempt to review some set of open RFC
 pull requests regularly. If a core team member believes an RFC PR is ready to be accepted into active status, they can approve the PR using GitHub's review feature to signal their approval of the RFC.
 
