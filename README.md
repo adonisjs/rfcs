@@ -1,56 +1,105 @@
 # Adonis RFCs
-> Give your ideas some life :)
+> The process is inspired by the [Vuejs RFC process](https://github.com/vuejs/rfcs). Currently, we are testing out the RFC process and may tweak it as we go along and learn new things.
 
-Many small changes to the API and bug fixes can be done without creating any RFC. However, we may ask you to create a formal RFC for changes of the following nature.
+Many small changes to the existing APIs and bug fixes are usually done without creating any RFC. However, we may ask you to create a formal RFC for modifications of the following nature.
 
-- Adding an entirely new API or module to the eco-system.
+- Adding an entirely new API or module to the ecosystem.
 - Changing the behavior of an existing feature.
-- Features that are not clear and requires more discussion and community involvement.
+- Features that are not clear and require more discussion and community involvement.
 
-## How to know if RFC is required?
+## Why do you need to do this?
 
-> Feel free to join the [discord server](https://discordapp.com/invite/vDcEjq6) and ask it on general channel. If you think, you need more guidance, then feel free to ping `@virk` on Discord.
+We appreciate you taking out the time and sharing your ideas to improve the framework. However, as AdonisJS is growing and getting used in production, we have to be more responsible and careful with the changes or features we add to the framework.
 
-RFC is required, when the feature cannot be implemented separately and should be added to the core or the eco-system of first party plugins.
+Also, adding a new feature to the framework core or the official set of packages means creating more work for the framework creator/core team. We may not always be interested in executing new ideas or maintaining them in the long term, as there is always some ongoing work.
 
-If you think, a feature can be added and maintained as a 3rd party add-on, then there is no need of RFC. Just work on the feature, let us know, and we will be happy to spread the word.
+With that said, we still encourage you to share your ideas with us and see if we can bring them together to life.
 
-## Getting started
+## Taking the process seriously
 
-Adding a new feature, or changing behavior of an existing feature is a big responsibility. Make sure to spec out the feature clearly and explain clear use cases.
+The RFC process is not only about sharing your wishlist of features. You should do some proper research and create an actionable RFC. 
 
-A general template for creating an RFC can be.
+#### ❌ Bad example of an RFC
 
-1. Define the problem you are trying to solve.
-2. A bigger picture of the feature and how it will work as a concept.
-3. Technical details
+In the following example, you are transferring the weight of research and finalizing the implementation level details on the core team. 
 
-Another important aspect is to make sure that the feature is within the scope of [AdonisJs philosophy]().
+**These kinds of RFCs will be closed without any explanation**.
 
-## Creating your first RFC
+```
+Please add support for filesystem-based routing. It will be helpful for me and others as well.
 
-Let's get started together and create your first RFC. 
+These are some frameworks that do it.
+```
 
-1. Click [here](https://github.com/adonisjs/rfcs/issues/new) to open a new issue.
-2. Add the title of the issue. For example **Adding GraphQL as the first-class citizen to AdonisJs**.
-3. Fill out the issue template. If you think any section is irrelevant, write `NA.`
-4. Double check the issue and submit it.
-5. Normally someone from the core team will give appropriate labels to the issue and get in touch with you in a couple of days.
-6. If you think your RFC is waiting for the response for a more than 7days, please feel free to reach `@virk` on Discord server, or email `virk[at]adonisjs[dot]com.`
+#### ✅ A better example of an RFC
 
-## Lifecycle
+- Share the feature you want the framework to have
+- Share the basic usage examples
+- Share if there are going to be any performance issues by introducing the feature
+- If a variation of that API already exists, then have a conversation with the core team and try to understand why they opted for the other variation
+- Share design and implementation details
+- Share unknows - We will be more than happy to discuss them in-depth with you
+- Share know limitations
 
-Following is the lifecycle in which features are picked, developed and shipped to production.
+## What the process is
+In short, to get a major feature added to AdonisJS, one must first get the
+RFC merged into the RFC repo as a markdown file. At that point, the RFC
+is `'active'` and may be implemented to achieve eventual inclusion
+into AdonisJS.
 
-<img src="https://res.cloudinary.com/adonisjs/image/upload/v1534082256/Adonis-rfc-lifecycle_v0klvx.svg" width="350px" />
+* Fork the RFC repo https://github.com/adonisjs/rfcs
 
-## Filtering issues
+* Copy `0000-template.md` to `active-rfcs/0000-my-feature.md` (where
+'my-feature' is descriptive. Don't assign an RFC number yet).
 
-Before starting your own RFC, it is important to look for the existing one's and contribute to them.
+* Fill in the RFC. Put care into the details: **RFCs that do not
+present convincing motivation, demonstrate understanding of the
+impact of the design, or are disingenuous about the drawbacks or
+alternatives tend to be poorly received**.
 
-You can filter the features by their category using the `scope:` label.
+* Submit a pull request. Make sure to follow the pull request template and open a corresponding [discussion thread](https://github.com/thetutlage/rfcs/discussions).
 
-For example: The RFC for changes in the HTTP layer will have the label of `scope:HTTP`, for Database `scope:Database` and so on.
+* Build consensus and integrate feedback in the discussion thread. RFCs with broad support are much more likely to make progress than those who don't receive any comments.
 
-## Coding style
-Make sure to read the [contributing guidelines](https://adonisjs.com/docs/4.1/contribution-guide), before getting started.
+* Eventually, the [core team](https://github.com/orgs/adonisjs/people) will decide whether the RFC is a candidate
+for inclusion in AdonisJS.
+
+* An RFC can be modified based upon feedback from the [core team](https://github.com/orgs/adonisjs/people) and community. Significant modifications may trigger a new final comment period.
+
+* An RFC may be rejected after the public discussion has settled
+and comments have been made summarizing the rationale for rejection. A member of the [core team](https://github.com/orgs/adonisjs/people) should then close the RFC's associated pull request.
+
+* An RFC may be accepted at the close of its final comment period. A [core team](https://github.com/orgs/adonisjs/people) member will merge the RFC's associated pull request, at which point the RFC will become 'active'.
+
+* RFCs created by the core team may not wait for the consensus, since the work implemented in the RFC is directly maintained by the core team. However, if there is a strong push back, then the core team must build a consensus or drop the idea.
+
+## Details on Active RFCs
+
+Once an RFC becomes active, then authors may implement it and submit the
+feature as a pull request to the applicable AdonisJS repo. Becoming `'active'` is not a rubber stamp, and in particular, it still does not mean we will ultimately merge the feature; it does mean that the core team has agreed to it in principle and are amenable to merging it.
+
+Furthermore, the fact that a given RFC has been accepted and 'active' implies nothing about what priority is assigned to its implementation or whether anybody is currently working on it.
+
+We can do modifications to active RFCs in follow-up PRs. We strive
+to write each RFC in a manner that will reflect the final design of
+the feature; but the nature of the process means that we cannot expect
+every merged RFC to reflect what the end result will be at
+the time of the next major release; therefore, we try to keep each RFC
+document somewhat in sync with the language feature as planned,
+tracking such changes via follow-up pull requests to the document.
+
+## Implementing an RFC
+
+The author of an RFC is not obligated to implement it. Of course, the RFC author (like any other developer) is welcome to post an implementation for review after the RFC has been accepted.
+
+An active RFC should have the link to the implementation PR listed if there is one. You should conduct feedback on the actual implementation in the implementation PR instead of the original RFC PR.
+
+If you are interested in working on the implementation for an 'active'
+RFC, but cannot determine if someone else is already working on it,
+feel free to ask (e.g., by leaving a comment on the associated issue).
+
+## Reviewing RFC's
+
+Members of the [core team](https://github.com/orgs/adonisjs/people) will attempt to review some set of open RFC
+pull requests regularly. If a core team member believes an RFC PR is ready to be accepted into active status, they can approve the PR using GitHub's review feature to signal their approval of the RFC.
+
