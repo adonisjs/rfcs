@@ -48,7 +48,7 @@ schema.create({
 })
 ```
 
-Or ay allow the user to do something like this:
+Or may allow the user to do something like this:
 ```ts
 schema.create({
   title: schema.string([ 
