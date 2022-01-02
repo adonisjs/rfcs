@@ -98,7 +98,8 @@ As soon as a request is processed by the Adonis HTTP server, it should be possib
 - Triggered Controller and Method ( ex: `UserController.index` )
 - Triggered middlewares
 - Headers, Payload, Session
-- Server response et response status
+- Used View ( if any ). In case the server return is just a JSON, no issues, we store it in Adoscope. However, if we return a View, we shouldn't store the HTML in Adoscope, it wouldn't make sense. So we need to be able to access the View used, and ideally also retrieve the data bindings. This way we only record the name of the template used and display it to the user in Adoscope
+- Server response and response status
 - Duration of the request
 
 ### Possible solutions
@@ -193,6 +194,13 @@ import Redis from '@ioc:Adonis/Addons/Redis'
 Redis.enableEvents()
 Redis.disableEvents()
 ```
+
+I was able to develop the Watcher for Mails, and Events. Thanks to this `mail:send` event, the code seems much cleaner :
+- https://github.com/Julien-R44/adoscope/blob/main/app/Watchers/MailWatcher.ts
+- https://github.com/Julien-R44/adoscope/blob/main/app/Watchers/EventWatcher.ts
+
+I also tried to develop the watcher for the requests, but via a Middleware, especially to be able to test the rest of Adoscope. This solution really seems to be a hackish solution, and some data seems to me finally impossible to recover this way.
+- https://github.com/Julien-R44/adoscope/blob/main/app/Middleware/AdoscopeMiddleware.ts
 
 # Drawbacks
 
