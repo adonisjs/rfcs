@@ -195,19 +195,20 @@ Redis.enableEvents()
 Redis.disableEvents()
 ```
 
-I was able to develop the Watcher for Mails, and Events. Thanks to this `mail:send` event, the code seems much cleaner :
-- https://github.com/Julien-R44/adoscope/blob/main/app/Watchers/MailWatcher.ts
-- https://github.com/Julien-R44/adoscope/blob/main/app/Watchers/EventWatcher.ts
-
-I also tried to develop the watcher for the requests, but via a Middleware, especially to be able to test the rest of Adoscope. This solution really seems to be a hackish solution, and some data seems to me finally impossible to recover this way.
-- https://github.com/Julien-R44/adoscope/blob/main/app/Middleware/AdoscopeMiddleware.ts
-
 # Drawbacks
 
 It is possible that adding Events everywhere like this could affect the performance of Adonis. 
 We will certainly have to do some benchmarks to evaluate the cost of this feature. In particular for events that are often raised, I think in particular events for Requests or Redis.
 
 But as suggested below, offering an API to enable and disable the emission of events could be a solution.
+
+# Additional notes
+I was able to develop the Watcher for Mails, and Events. Thanks to this `mail:send` event, the code seems much cleaner :
+- https://github.com/Julien-R44/adoscope/blob/main/app/Watchers/MailWatcher.ts
+- https://github.com/Julien-R44/adoscope/blob/main/app/Watchers/EventWatcher.ts
+
+I also tried to develop the watcher for the requests, but via a Middleware, especially to be able to test the rest of Adoscope. This solution really seems to be a hackish solution, and some data seems to me finally impossible to recover this way.
+- https://github.com/Julien-R44/adoscope/blob/main/app/Middleware/AdoscopeMiddleware.ts
 
 # Alternatives
 
